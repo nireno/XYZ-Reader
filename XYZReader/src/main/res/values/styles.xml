@@ -18,7 +18,21 @@
 <resources>
 
     <style name="Theme.Bacon" parent="@style/Theme.AppCompat.Light.NoActionBar">
+    </style>
 
+    <style name="ListItemArticleTitle" parent="TextAppearance.AppCompat.Subhead">
+        <item name="android:textColor">@color/gray_700</item>
+    </style>
+
+    <style name="ListItemArticleSubtitle" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">@color/gray_500</item>
+    </style>
+
+    <style name="ArticleBody" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@color/gray_700</item>
+        <item name="android:textSize">@dimen/detail_body_text_size</item>
+        <item name="android:textColorLink">@color/theme_accent</item>
+        <item name="android:lineSpacingMultiplier">@fraction/detail_body_line_spacing_multiplier</item>
     </style>
 
     <style name="Theme.Bacon.Detail">
