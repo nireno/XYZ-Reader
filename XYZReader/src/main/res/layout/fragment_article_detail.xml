@@ -9,21 +9,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <FrameLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <FrameLayout
                 android:id="@+id/photo_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/photo_placeholder">
+                android:background="@color/photo_placeholder" >
                 <!--suppress AndroidLintContentDescription -->
                 <ImageView
                     android:id="@+id/photo"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                     />
+                    android:layout_width="match_parent"
+                    android:layout_height="256dp"
+                    android:scaleType="centerCrop"
+                    />
 
                 <View
                     android:layout_width="match_parent"
@@ -40,7 +41,8 @@
                 android:maxWidth="@dimen/detail_card_max_width"
                 android:background="#fff"
                 android:elevation="2dp"
-                android:layout_marginTop="@dimen/detail_card_top_margin">
+                android:layout_below="@id/photo_container"
+                android:id="@+id/frameLayout">
 
                 <LinearLayout
                     android:id="@+id/meta_bar"
@@ -85,7 +87,7 @@
                     android:paddingBottom="@dimen/detail_body_bottom_margin" />
 
             </com.example.xyzreader.ui.MaxWidthLinearLayout>
-        </FrameLayout>
+        </RelativeLayout>
     </com.example.xyzreader.ui.ObservableScrollView>
 
     <ImageButton android:id="@+id/share_fab"
